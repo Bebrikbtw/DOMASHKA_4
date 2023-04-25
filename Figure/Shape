@@ -1,0 +1,19 @@
+import java.awt.Color;
+
+abstract class Shape {
+    protected Color color;
+    
+    public Shape(Color color) {
+        this.color = color;
+    }
+    
+    public abstract void draw();
+    
+    public boolean equals(Object obj) {
+        if (obj instanceof Shape) {
+            Shape other = (Shape) obj;
+            return this.color.equals(other.color);
+        }
+        return false;
+    }
+}
