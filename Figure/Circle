@@ -1,0 +1,22 @@
+class Circle extends Shape {
+    private int x, y, radius;
+    
+    public Circle(Color color, int x, int y, int radius) {
+        super(color);
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    
+    public void draw() {
+        // код для рисования круга с координатами (x, y) и радиусом radius
+    }
+    
+    public boolean equals(Object obj) {
+        if (obj instanceof Circle) {
+            Circle other = (Circle) obj;
+            return super.equals(other) && this.x == other.x && this.y == other.y && this.radius == other.radius;
+        }
+        return false;
+    }
+}
