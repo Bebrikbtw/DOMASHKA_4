@@ -1,0 +1,23 @@
+class Rectangle extends Shape {
+    private int x1, y1, x2, y2;
+    
+    public Rectangle(Color color, int x1, int y1, int x2, int y2) {
+        super(color);
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+    
+    public void draw() {
+        // код для рисования прямоугольника с координатами (x1, y1) и (x2, y2)
+    }
+    
+    public boolean equals(Object obj) {
+        if (obj instanceof Rectangle) {
+            Rectangle other = (Rectangle) obj;
+            return super.equals(other) && this.x1 == other.x1 && this.y1 == other.y1 && this.x2 == other.x2 && this.y2 == other.y2;
+        }
+        return false;
+    }
+}
