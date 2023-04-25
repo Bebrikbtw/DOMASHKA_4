@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
+        Shape[] shapes = new Shape[] {
+            new Circle(Color.RED, 50, 50, 30),
+            new Rectangle(Color.BLUE, 10, 10, 100, 50)
+        };
+        
+        for (Shape shape : shapes) {
+            shape.draw();
+        }
+    }
+}
